@@ -15,10 +15,10 @@
         <div class="col m12">
             <table class="resultsTable">
                 <tr>
-                    <td>
+                    
                         @if (Model.isPrime(Model.num) == true)
                         {
-<td class="tdWords"> <i class="material-icons icon"> check_circle</i> Prime</td>
+                    <td class="tdWords"> <i class="material-icons icon"> check_circle</i> Prime</td>
 
                     }
                     else
@@ -26,9 +26,9 @@
                         <td class="tdWords"> <i class="material-icons icon">highlight_off</i> Prime</td>
 
                     }
-                    </td>
+                   
 
-                   <td> @if (Model.isPerfect() == true)
+                   @if (Model.isPerfect() == true)
                     {
                         <td class="tdWords"> <i class="material-icons icon">check_circle</i> Perfect</td>
 
@@ -39,9 +39,9 @@
 
 
                     }
-                    </td>
+                   
 
-                    <td>
+                   
                     @if (Model.isSquareful() == true)
                     {
                         <td class="tdWords"> <i class="material-icons icon"> check_circle</i> Squareful</td>
@@ -52,9 +52,9 @@
                         <td class="tdWords"> <i class="material-icons icon">highlight_off</i> Squareful</td>
 
                     }
-                    </td>
+                   
 
-                    <td>
+                   
                     @if (Model.isSquarefull() == true)
                     {
                         <td class="tdWords"> <i class="material-icons icon">check_circle</i> Squarefull</td>
@@ -66,9 +66,9 @@
 
 
                     }
-                    </td>
+                    
 
-                    <td>
+                   
                     @if (Model.isPalindrome() == true)
                     {
                         <td class="tdWords"> <i class="material-icons icon">check_circle</i> Palindromic</td>
@@ -79,7 +79,7 @@
                         <td class="tdWords"> <i class="material-icons icon">highlight_off</i> Palindromic</td>
                         
                     }
-                    </td>
+                    
                    
                 </tr>
 
@@ -178,6 +178,6 @@
 
             <p> <i class="material-icons">close</i> Prime </p>
         *@
-
-        <a href="/home/index" class="btn waves-effect waves-light backButton red darken-4"> <i class="material-icons">arrow_back</i> Back </a>
-
+<div class="row">
+        <a href="/home/index" class="btn waves-effect waves-light backButton red darken-2"> <i class="material-icons">arrow_back</i> Back </a>
+    </div>

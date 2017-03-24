@@ -11,7 +11,7 @@ namespace NumberFun.Models
         public int num { get; set; }
         public NumberAnalize( int input)
             {
-            input = num;
+            num = input;
             }
 
             public bool isPerfect()
