@@ -1,15 +1,12 @@
-﻿@model int
+﻿@model NumberFun.Models.NumberAnalize
 
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
 }
 
 
 <h2 class="results"> Results </h2>
 
-<h3 class="resultsNumber"> @Model </h3>
+<h3 class="resultsNumber"> @Model.num </h3>
 
 
 
@@ -18,16 +15,161 @@
         <div class="col m12">
             <table class="resultsTable">
                 <tr>
-                    <td class="tdWords"> <i class="material-icons icon">done</i> Prime</td>
-                    <td class="tdWords"> <i class="material-icons icon">done</i> Perfect</td>
-                    <td class="tdWords"> <i class="material-icons icon">done</i> Squareful</td>
-                    <td class="tdWords"> <i class="material-icons icon">done</i> Squarefull</td>
-                    <td class="tdWords"> <i class="material-icons icon">done</i> Palindromic </td>
+                    <td>
+                        @if (Model.isPrime(Model.num) == true)
+                        {
+<td class="tdWords"> <i class="material-icons icon"> check_circle</i> Prime</td>
+
+                    }
+                    else
+                    {
+                        <td class="tdWords"> <i class="material-icons icon">highlight_off</i> Prime</td>
+
+                    }
+                    </td>
+
+                   <td> @if (Model.isPerfect() == true)
+                    {
+                        <td class="tdWords"> <i class="material-icons icon">check_circle</i> Perfect</td>
+
+                    }
+                    else
+                    {
+                        <td class="tdWords"> <i class="material-icons icon">highlight_off</i> Perfect</td>
+
+
+                    }
+                    </td>
+
+                    <td>
+                    @if (Model.isSquareful() == true)
+                    {
+                        <td class="tdWords"> <i class="material-icons icon"> check_circle</i> Squareful</td>
+
+                    }
+                    else
+                    {
+                        <td class="tdWords"> <i class="material-icons icon">highlight_off</i> Squareful</td>
+
+                    }
+                    </td>
+
+                    <td>
+                    @if (Model.isSquarefull() == true)
+                    {
+                        <td class="tdWords"> <i class="material-icons icon">check_circle</i> Squarefull</td>
+
+                    }
+                    else
+                    {
+                        <td class="tdWords"> <i class="material-icons icon">highlight_off</i> Squarefull</td>
+
+
+                    }
+                    </td>
+
+                    <td>
+                    @if (Model.isPalindrome() == true)
+                    {
+                        <td class="tdWords"> <i class="material-icons icon">check_circle</i> Palindromic</td>
+
+                    }
+                    else
+                    {
+                        <td class="tdWords"> <i class="material-icons icon">highlight_off</i> Palindromic</td>
+                        
+                    }
+                    </td>
+                   
                 </tr>
+
+
 
             </table>
         </div>
         </div>
+
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Prime</span>
+                <p>
+                    A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+                </p>
+            </div>
+            <div class="card-action">
+                <a href="https://en.wikipedia.org/wiki/Prime_number">Our Source</a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Perfect</span>
+                <p>
+                    A perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum).                </p>
+            </div>
+            <div class="card-action">
+                <a href="https://en.wikipedia.org/wiki/Perfect_number">Our Source</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Squareful</span>
+                <p>
+                    A number is squareful, also called nonsquarefree, if it contains at least one square in its prime factorization.                </p>
+            </div>
+            <div class="card-action">
+                <a href="http://mathworld.wolfram.com/Squareful.html">Our Source</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Squarefull</span>
+                <p>
+                    A powerful number is a positive integer m such that for every prime number p dividing m, p2 also divides m.                </p>
+            </div>
+            <div class="card-action">
+                <a href="https://en.wikipedia.org/wiki/Powerful_number">Our Source</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Palindromic</span>
+                <p>
+                    A palindromic number or numeral palindrome is a number that remains the same when its digits are reversed.                </p>
+            </div>
+            <div class="card-action">
+                <a href="https://en.wikipedia.org/wiki/Palindromic_number">Our Source</a>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
         @*

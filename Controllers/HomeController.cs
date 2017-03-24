@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using NumberFun.Models;
 
 namespace NumberFun.Controllers
 {
@@ -18,10 +19,13 @@ namespace NumberFun.Controllers
             int n;
             if ( int.TryParse(number, out n) )
             {
-                return View(n);
+                NumberAnalize num = new NumberAnalize(n);
+
+                return View(num);
             }else
             {
                 return Error();
+
             }  
         }
         
